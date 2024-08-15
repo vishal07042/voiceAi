@@ -1,0 +1,29 @@
+{
+  "name": "questionsextractor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+
+  "devDependencies": {
+   
+  },
+  "dependencies": {
+    
+    "snarkdown": "^2.0.0",
+     "dotenv-safe": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-synacor": "^3.0.5",
+    "highlight.js": "^11.9.0",
+    "if-env": "^1.0.0",
+    "axios": "^1.6.7",
+  
+    "puppeteer": "^10.2.0",
+    "turndown": "^6.0.0"
+  }
+}
