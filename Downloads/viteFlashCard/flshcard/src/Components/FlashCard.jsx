@@ -62,7 +62,7 @@ const pathOfImages = [
 "/src/assets/marvelChars/Hulkbuster_09_Foreground_Common.png",
 ];
 
-const Flashcard = ({ id, topic, points, color, hero, isActive, index }) => (
+const Flashcard = ({ id, topic, points, color, hero, isActive, index, definition, storyToRememberTheConcept }) => (
     <div
         className={`card2 w-96 h-128 rounded-xl shadow-lg p-8 bg-gradient-to-br ${color} text-white absolute 
     ${isActive ? 'z-10 scale-110' : 'scale-95 opacity-70'}`}
@@ -82,7 +82,8 @@ const Flashcard = ({ id, topic, points, color, hero, isActive, index }) => (
         </div>
         <div className="mt-8">
             <h2 className="text-2xl font-bold uppercase">{topic}</h2>
-            <p className="text-base mt-2">Master this algorithm to level up!</p>
+            <p className="text-[22px] mt-2">{definition}</p>
+            <p className="text-[22px] mt-2">{storyToRememberTheConcept}</p>
         </div>
     </div>
 );
