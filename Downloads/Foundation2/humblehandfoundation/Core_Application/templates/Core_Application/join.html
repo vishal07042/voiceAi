@@ -1,0 +1,648 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Humble Hand - Hand for need's</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+        {% load static %}
+        <img src="{% static 'images/humblehand.png' %}" alt="Humble Hand Logo" class="img-fluid" style="height: 90px; margin-right: 10px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="{% url 'donate' %}" class="nav-link">Donate</a></li>
+<li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+<li class="nav-item"><a href="{% url 'join' %}" class="nav-link">Join</a></li>
+
+<li class="nav-item"><a href="{% url 'events' %}" class="nav-link">Events</a></li>
+<li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- END nav -->
+    <div class="hero-wrap" style="background-image: url('{% static "images/bg_4.png" %}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+               <span class="mr-2"><a href="{% url 'index' %}"></a></span> 
+               <span></span>
+             </p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Join Us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    {% include 'Core_Application/photo.html' %}
+
+    <!-- Impact Counter Section -->
+    <section class="ftco-section counter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="impact-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1000">0</div>
+                            <div class="stat-label">Active Volunteers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="25">0</div>
+                            <div class="stat-label">Cities Reached</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Join Section -->
+    <section class="ftco-section ways-to-join">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="gradient-text">Ways to Make an Impact</h2>
+                <p class="lead">Choose your path to create positive change in the community</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <div class="card-icon">
+                            <div class="icon-circle">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                        </div>
+                        <h3>Volunteer</h3>
+                        <p>Be the change you want to see in the world</p>
+                        <ul class="impact-list">
+                            <li><i class="fas fa-check"></i> Community Outreach</li>
+                            <li><i class="fas fa-check"></i> Event Organization</li>
+                            <li><i class="fas fa-check"></i> Teaching & Mentoring</li>
+                            <li><i class="fas fa-check"></i> Healthcare Support</li>
+                        </ul>
+                        <div class="time-commitment">
+                            <span>Time Commitment:</span>
+                            <div class="time-badges">
+                                <span class="badge">Weekends</span>
+                                <span class="badge">4-6 hrs/week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="impact-card featured">
+                        <div class="featured-tag">Most Popular</div>
+                        <div class="card-icon">
+                            <div class="icon-circle">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <h3>Internship</h3>
+                        <p>Learn while making a difference</p>
+                        <ul class="impact-list">
+                            <li><i class="fas fa-check"></i> Project Management</li>
+                            <li><i class="fas fa-check"></i> Digital Marketing</li>
+                            <li><i class="fas fa-check"></i> Content Creation</li>
+                            <li><i class="fas fa-check"></i> Research & Analysis</li>
+                        </ul>
+                        <div class="time-commitment">
+                            <span>Duration:</span>
+                            <div class="time-badges">
+                                <span class="badge">2-6 months</span>
+                                <span class="badge">Full/Part Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <div class="card-icon">
+                            <div class="icon-circle">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                        </div>
+                        <h3>Partnership</h3>
+                        <p>Create lasting impact together</p>
+                        <ul class="impact-list">
+                            <li><i class="fas fa-check"></i> CSR Initiatives</li>
+                            <li><i class="fas fa-check"></i> NGO Collaboration</li>
+                            <li><i class="fas fa-check"></i> Resource Sharing</li>
+                            <li><i class="fas fa-check"></i> Joint Programs</li>
+                        </ul>
+                        <div class="time-commitment">
+                            <span>Engagement:</span>
+                            <div class="time-badges">
+                                <span class="badge">Long Term</span>
+                                <span class="badge">Strategic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section-3 img" style="background-image: url({% static 'images/bg_3.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row d-md-flex justify-content-center">
+                <div class="col-md-8 volunteer pl-md-5 ftco-animate">
+                    <h3 class="mb-3 text-center text-white">Join As Volunteer</h3>
+                    <form action="{% url 'join' %}" method="POST" class="volunteer-form">
+                        {% csrf_token %}
+                        
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+
+                        <!-- Phone Field -->
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required 
+                                   pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                        </div>
+
+                        <!-- Age Field -->
+                        <div class="form-group">
+                            <input type="number" name="age" class="form-control" placeholder="Your Age" required 
+                                   min="18" max="100" title="Age must be between 18 and 100">
+                        </div>
+
+                        <!-- Profession Field -->
+                        <div class="form-group">
+                            <select name="profession" class="form-control" required>
+                                <option value="" disabled selected>Select Your Profession</option>
+                                <option value="STUDENT">Student</option>
+                                <option value="PRIVATE">Private Employee</option>
+                                <option value="GOVERNMENT">Government Employee</option>
+                                <option value="BUSINESS">Self Business</option>
+                                <option value="SOCIAL">Social Worker</option>
+                                <option value="OTHER">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Why do you want to join as a volunteer?" rows="4"></textarea>
+                        </div>
+
+                        {% if messages %}
+                        <div class="form-group">
+                            {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <!-- Submit Button -->
+                        <div class="form-group text-center">
+                            <input type="submit" value="Submit Application" class="btn btn-white py-3 px-5">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	  {% include 'Core_Application/footer.html' %}
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+{% load static %}
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    
+  <!-- Add this script at the end of your file -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Form validation
+      const form = document.querySelector('.volunteer-form');
+      
+      form.addEventListener('submit', function(e) {
+          const phone = document.querySelector('input[name="phone"]');
+          const age = document.querySelector('input[name="age"]');
+          
+          if (phone.value.length !== 10 || isNaN(phone.value)) {
+              e.preventDefault();
+              alert('Please enter a valid 10-digit phone number');
+          }
+          
+          if (age.value < 18 || age.value > 100) {
+              e.preventDefault();
+              alert('Age must be between 18 and 100');
+          }
+      });
+
+      // Add animation to cards
+      const cards = document.querySelectorAll('.join-card');
+      cards.forEach(card => {
+          card.addEventListener('mouseenter', function() {
+              this.style.transform = 'translateY(-10px)';
+          });
+          card.addEventListener('mouseleave', function() {
+              this.style.transform = 'translateY(0)';
+          });
+      });
+
+      // Counter Animation
+      const counters = document.querySelectorAll('.stat-number');
+      const speed = 200;
+
+      const animateCounter = (counter) => {
+          const target = +counter.getAttribute('data-count');
+          const count = +counter.innerText;
+          const increment = target / speed;
+
+          if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(() => animateCounter(counter), 1);
+          } else {
+              counter.innerText = target;
+          }
+      };
+
+      // Intersection Observer for counter animation
+      const observerCallback = (entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  counters.forEach(counter => animateCounter(counter));
+              }
+          });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, {
+          threshold: 0.5
+      });
+
+      observer.observe(document.querySelector('.impact-stats'));
+  });
+  </script>
+
+  <!-- Add these styles to match the modern design -->
+  <style>
+  /* Modern styling for the entire page */
+  .counter-section {
+      background: linear-gradient(135deg, #fff8f6 0%, #fff 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .counter-section::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(45deg, rgba(248, 111, 45, 0.1), rgba(255, 143, 80, 0.1));
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+  }
+
+  .impact-stats {
+      background: white;
+      border-radius: 30px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(248, 111, 45, 0.1);
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .stat-item {
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+  }
+
+  .stat-number {
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, #f86f2d, #ff8f50);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      display: inline-block;
+  }
+
+  .stat-label {
+      color: #666;
+      font-size: 1.1rem;
+      font-weight: 500;
+  }
+
+  /* Ways to Join Section */
+  .ways-to-join {
+      padding: 100px 0;
+      background: white;
+      position: relative;
+  }
+
+  .gradient-text {
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, #f86f2d, #ff8f50);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+  }
+
+  .impact-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      height: 100%;
+      border: 2px solid transparent;
+      overflow: hidden;
+  }
+
+  .impact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(248, 111, 45, 0.05), rgba(255, 143, 80, 0.05));
+      opacity: 0;
+      transition: all 0.4s ease;
+  }
+
+  .impact-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: #f86f2d;
+  }
+
+  .impact-card:hover::before {
+      opacity: 1;
+  }
+
+  .icon-circle {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(45deg, #f86f2d, #ff8f50);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      position: relative;
+      transition: all 0.3s ease;
+  }
+
+  .icon-circle::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: inherit;
+      opacity: 0.3;
+      filter: blur(10px);
+      z-index: -1;
+  }
+
+  .icon-circle i {
+      font-size: 40px;
+      color: white;
+  }
+
+  /* Volunteer Form Section */
+  .volunteer-section {
+      position: relative;
+      padding: 80px 0;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .volunteer-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+  }
+
+  .volunteer-form-container {
+      background: white;
+      border-radius: 30px;
+      padding: 50px 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      position: relative;
+  }
+
+  .form-group {
+      margin-bottom: 25px;
+  }
+
+  .form-control {
+      height: auto;
+      padding: 15px 20px;
+      border: 2px solid #eee;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      font-size: 16px;
+  }
+
+  .form-control:focus {
+      border-color: #f86f2d;
+      box-shadow: 0 0 0 0.2rem rgba(248, 111, 45, 0.1);
+  }
+
+  .btn-submit {
+      background: linear-gradient(45deg, #f86f2d, #ff8f50);
+      border: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .btn-submit::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #ff8f50, #f86f2d);
+      opacity: 0;
+      transition: all 0.3s ease;
+  }
+
+  .btn-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(248, 111, 45, 0.2);
+  }
+
+  .btn-submit:hover::before {
+      opacity: 1;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .impact-stats {
+          flex-direction: column;
+          padding: 20px;
+      }
+
+      .stat-item {
+          margin-bottom: 30px;
+      }
+
+      .stat-number {
+          font-size: 2.5rem;
+      }
+
+      .gradient-text {
+          font-size: 2rem;
+      }
+
+      .volunteer-form-container {
+          padding: 30px 20px;
+      }
+  }
+
+  /* Animation Classes */
+  .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+  }
+
+  .fade-up.active {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  .slide-in {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.6s ease;
+  }
+
+  .slide-in.active {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  </style>
+
+  <!-- Add this script for animations -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Intersection Observer for fade animations
+      const observerOptions = {
+          threshold: 0.2,
+          rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('active');
+              }
+          });
+      }, observerOptions);
+
+      // Observe all elements with animation classes
+      document.querySelectorAll('.fade-up, .slide-in').forEach(el => {
+          observer.observe(el);
+      });
+
+      // Add smooth hover effects to cards
+      document.querySelectorAll('.impact-card').forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+              const rect = card.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+
+              card.style.transform = `
+                  perspective(1000px)
+                  rotateX(${(y - rect.height/2)/20}deg)
+                  rotateY(${(x - rect.width/2)/20}deg)
+                  translateY(-10px)
+              `;
+          });
+
+          card.addEventListener('mouseleave', () => {
+              card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+          });
+      });
+  });
+  </script>
+  </body>
+</html>

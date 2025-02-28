@@ -1,0 +1,138 @@
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-3">
+                    <h2 class="ftco-heading-2">About Us</h2>
+                    <p class="footer-text">A small acts of kindness that creates big change. Together, we're building a brighter, more inclusive future.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left mt-3">
+                        <li class="ftco-animate"><a href="https://www.instagram.com/humblehandfoundation"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-3 ml-md-4">
+                    <h2 class="ftco-heading-2">Quick Links</h2>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="{% url 'index' %}" class="py-1 d-block">Home</a></li>
+                        <li><a href="{% url 'about' %}" class="py-1 d-block">About</a></li>
+                        <li><a href="{% url 'join' %}" class="py-1 d-block">Join</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-3">
+                    <h2 class="ftco-heading-2">Contact Info</h2>
+                    <div class="block-23">
+                        <ul class="footer-contact">
+                            <li><span class="icon icon-map-marker"></span><span class="text">Vadodara</span></li>
+                            <li><a href="tel:+91XXXXXXXXXX"><span class="icon icon-phone"></span><span class="text">+91 XXXXXXXXXX</span></a></li>
+                            <li><a href="mailto:info@humblehand.org"><span class="icon icon-envelope"></span><span class="text">info@humblehand.org</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="copyright">Copyright &copy; 2024 Humble Hand Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .ftco-footer {
+        background: #232323;
+        padding: 40px 0 20px 0;
+        font-size: 14px;
+    }
+
+    .ftco-heading-2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    .footer-text {
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+        padding: 3px 0;
+        display: inline-block;
+    }
+
+    .footer-links a:hover {
+        color: #f86f2d;
+        text-decoration: none;
+        padding-left: 5px;
+    }
+
+    .footer-contact li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-contact li a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+    }
+
+    .footer-contact li a:hover {
+        color: #f86f2d;
+        text-decoration: none;
+    }
+
+    .footer-contact .icon {
+        margin-right: 10px;
+        color: #f86f2d;
+    }
+
+    .ftco-footer-social li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .ftco-footer-social a {
+        width: 35px;
+        height: 35px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .ftco-footer-social a:hover {
+        background: #f86f2d;
+        transform: translateY(-3px);
+    }
+
+    .copyright {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .ftco-footer {
+            padding: 30px 0 15px 0;
+        }
+
+        .ftco-footer-widget {
+            margin-bottom: 20px;
+        }
+    }
+</style>

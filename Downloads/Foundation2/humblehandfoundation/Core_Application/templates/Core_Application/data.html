@@ -1,0 +1,358 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Humble Hand - Admin Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="dashboard-body">
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="{% url 'index' %}" class="back-button">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+    </div>
+
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to the control panel</p>
+    </div>
+
+    <!-- Data Cards Section -->
+    <div class="dashboard-container">
+        <div class="data-grid">
+            <!-- Volunteer Card -->
+            <div class="data-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Volunteers</h3>
+                        <div class="stat">
+                            <span class="number">{{ volunteer_count }}</span>
+                            <span class="label">Active Members</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'volunteer_data' %}" class="view-details">
+                        View Details
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contacts Card -->
+            <div class="data-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Messages</h3>
+                        <div class="stat">
+                            <span class="number">{{ message_count }}</span>
+                            <span class="label">New Contacts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'message_data' %}" class="view-details">
+                        View Details
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Signups Card -->
+            <div class="data-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Users</h3>
+                        <div class="stat">
+                            <span class="number">{{ user_count }}</span>
+                            <span class="label">Registered Users</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'user_data' %}" class="view-details">
+                        View Details
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Donations Card -->
+            <div class="data-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Donations</h3>
+                        <div class="stat">
+                            <span class="number">₹0</span>
+                            <span class="label">Total Received</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'donation_data' %}" class="view-details">
+                        View Details
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+.dashboard-body {
+    background: #f4f6f9;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.dashboard-header {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #f86f2d, #ff8f50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dashboard-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.data-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #f86f2d, #ff8f50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.card-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.card-info {
+    flex: 1;
+}
+
+.card-info h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.stat .number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f86f2d;
+    margin-bottom: 5px;
+}
+
+.stat .label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.card-footer {
+    padding: 15px 25px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.view-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #f86f2d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.view-details i {
+    transition: transform 0.3s ease;
+}
+
+.view-details:hover {
+    color: #ff8f50;
+}
+
+.view-details:hover i {
+    transform: translateX(5px);
+}
+
+.back-button-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background: white;
+    border-radius: 50px;
+    color: #f86f2d;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.back-button i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    background: #f86f2d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        padding: 30px 0;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2rem;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-icon i {
+        font-size: 20px;
+    }
+
+    .stat .number {
+        font-size: 1.5rem;
+    }
+
+    .back-button span {
+        display: none;
+    }
+
+    .back-button {
+        padding: 12px;
+    }
+
+    .back-button i {
+        margin: 0;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate cards on load
+    const cards = document.querySelectorAll('.data-card');
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            card.style.transition = 'all 0.5s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 100);
+    });
+
+    // Number counter animation
+    const numbers = document.querySelectorAll('.number');
+    numbers.forEach(number => {
+        const target = number.textContent;
+        const isRupees = target.includes('₹');
+        const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+        number.textContent = isRupees ? '₹0' : '0';
+        
+        let current = 0;
+        const increment = numericValue / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= numericValue) {
+                number.textContent = target;
+                clearInterval(timer);
+            } else {
+                number.textContent = isRupees ? `₹${Math.floor(current)}` : Math.floor(current);
+            }
+        }, 30);
+    });
+});
+</script>
+
+</body>
+</html>

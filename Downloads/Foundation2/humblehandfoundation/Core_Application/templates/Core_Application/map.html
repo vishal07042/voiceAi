@@ -1,0 +1,184 @@
+<section class="map-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-4">Our Location</h2>
+                <h4>Visit us at our office or get in touch with us</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="location-info ftco-animate">
+                    <div class="info-card">
+                        <div class="info-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Near Vadodara Railway Station,<br>
+                                   Sayajiganj, Vadodara,<br>
+                                   Gujarat 390005</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="icon">🕒</span>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                   Saturday: 9:00 AM - 2:00 PM<br>
+                                   Sunday: Closed</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <h4>Contact</h4>
+                                <p>Phone: +91 xxxxx xxxxx<br>
+                                   Email: info@humblehand.org</p>
+                            </div>
+                        </div>
+
+                        <a href="https://goo.gl/maps/your-location-link" target="_blank" class="direction-btn">
+                            Get Directions
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="map-container ftco-animate">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4214.639853834216!2d73.17745803346298!3d22.310192255728847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8b2a798a37f%3A0xf48761c1300253a7!2sVadodara%20Railway%20Station%2C%20Maharaja%20Sayajirao%20University%2C%20Sayajiganj%2C%20Vadodara%2C%20Gujarat%20390005!5e1!3m2!1sen!2sin!4v1735109921352!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="450" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .map-section {
+        padding: 80px 0;
+        background: #f8f9fa;
+    }
+
+    .location-info {
+        height: 100%;
+    }
+
+    .info-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .info-item .icon {
+        font-size: 24px;
+        margin-right: 15px;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .info-item h4 {
+        color: #f86f2d;
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .info-item p {
+        margin: 0;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .direction-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(45deg, #f86f2d, #ff8f50);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .direction-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(248,111,45,0.3);
+        color: white;
+    }
+
+    .map-container {
+        background: white;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    .map-container iframe {
+        border-radius: 10px;
+    }
+
+    .heading-section h2 {
+        color: #333;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .heading-section p {
+        color: #666;
+        font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .location-info {
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            padding: 20px;
+        }
+
+        .map-container {
+            height: 300px;
+        }
+
+        .map-container iframe {
+            height: 100%;
+        }
+    }
+</style>
+
